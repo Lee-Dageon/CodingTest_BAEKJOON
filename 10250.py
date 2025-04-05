@@ -1,3 +1,5 @@
+
+
 # H 층수 W 방수
 def reserve(H, W, N): #방 번호를 반환하는 함수
     count = 1

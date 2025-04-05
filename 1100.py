@@ -1,3 +1,6 @@
+# 8×8 체스판에서 흰색 칸 위에 있는 'F' 말의 개수를 세는 프로그램
+
+
 count = 0 # 흰색 칸 위의 말의 개수
 flag = True # T F T F ... 토글
 for _ in range(8): # 8번 입력
@@ -11,6 +14,7 @@ for _ in range(8): # 8번 입력
                 count += 1
     flag = not flag # T F T F ... 토글
 print(count)
+
 
 
 

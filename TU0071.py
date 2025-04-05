@@ -6,23 +6,21 @@
 # join 이라는 함수 사용
 
 
-A = input().split() #문자열을 리스트로 변환
-B = input().split()
+A, B = input().split()
 
-L = [['.']*len(A)] for _ in range(len(B))]
-
+M = [['.']*len(A) for _ in range(len(B))]
 
 for c in range (len(A)):
-    r = B.find(A[c])    #A단어의 c번째 문자를 B단어에서 찾는다.
+    r = B.find(A[c])    #A단어의 c번째 문자를 B단어에서 찾는다. 찾지 못하면 -1 을 반환한다.
     if r != -1:         #찾았으면 r행 c열에서 중복
+        for i in range(len(A)):     #r행에 A단어를 넣는다.
+            M[r][i] = A[i]
+
+        for i in range(len(B)):     #c열에 B단어를 넣는다.
+            M[i][c] = B[i]
         break
 
-for i in range(len(A)):     #r행에 A단어를 넣는다.
-    M[r][i] = A[i]
-for i in range(len(B)):     #c열에 B단어를 넣는다.
-    M[i][c] = B[i]
 
-
-for i in range(len(B))  #행의 개수
+for i in range(len(B)):  #행의 개수
     print(''.join(M[i]))
 
